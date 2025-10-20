@@ -101,8 +101,8 @@ def train_loop(model, train_loader, val_loader, device, epochs, lr, model_dir, q
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", type=str, default=r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\Resurrecion\dataset")
-    parser.add_argument("--model_dir", type=str, default=r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\Resurrecion\saved_models")
+    parser.add_argument("--data_dir", type=str, default=r"C:\Users\javie\Documents\GitHub\CNN_Cosmic_Rays_PS\dataset")
+    parser.add_argument("--model_dir", type=str, default=r"C:\Users\javie\Documents\GitHub\CNN_Cosmic_Rays_PS\saved_models")
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--lr", type=float, default=1e-4)
