@@ -1,0 +1,29 @@
+Img_steady_capture_[FRAME]_[SUBFRAME]_scanning__optic_[WAVEBAND]_[WAVEBAND].fits_[TILE]_[ROTATION].png 
+Img_steady_capture - Base identifier for captured images
+
+[FRAME] (e.g., 35200, 35739) - Primary frame number
+
+[SUBFRAME] (e.g., 2200, 2233) - Secondary frame/subframe number
+scanning__optic - Indicates scanning optical system
+
+[WAVEBAND]_[WAVEBAND] - Spectral band identifier:
+
+0_0 = Visible light
+
+1_0 = UV light
+
+[TILE] - Tile index from 0 to 63
+
+Original image: 2048×2048 pixels
+
+Divided into: 256×256 pixel tiles (8×8 grid = 64 total tiles)
+
+[ROTATION] - Rotation angle index from 0 to 3
+
+0 = 0° rotation
+
+1 = 90° rotation
+
+2 = 180° rotation
+
+3 = 270° rotation

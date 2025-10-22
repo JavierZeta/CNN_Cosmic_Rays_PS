@@ -9,9 +9,6 @@ from Unet import UNetSimple
 from tqdm import tqdm
 import re
 
-# -----------------------------
-# Helper functions
-# -----------------------------
 
 def load_tiles_from_folder(noisy_dir, clean_dir, x_frames):
     """
@@ -177,7 +174,7 @@ if __name__ == "__main__":
 
     # Load model
     model = UNetSimple(in_channels=x_frames, n_classes=x_frames, base_ch=16)
-    checkpoint = torch.load(r"C:\Users\javie\Documents\GitHub\CNN_Cosmic_Rays_PS\saved_models\model_epoch50_20250930_045145_loss0.0107.pth")
+    checkpoint = torch.load(r"C:\Users\javie\Documents\GitHub\CNN_Cosmic_Rays_PS\saved_models\model_epoch50_20251022_043759_loss0.0000.pth")
     model.load_state_dict(checkpoint["model_state_dict"])
     print(f"Loaded model from epoch {checkpoint['epoch']} with val loss {checkpoint['loss']:.4f}")
 
@@ -188,11 +185,11 @@ for tid, t in model_inputs.items():
     print("tile", tid, "tensor shape", t.shape)  # expect [T,H,W]
     break
 
-# also print model forward shape on one batch
+# print model forward shape on one batch
 x = next(iter(model_inputs.values())).unsqueeze(0).to(device)  # [1,T,H,W]
 with torch.no_grad():
     logits = model(x)
-    print("logits shape:", logits.shape)  # expect [1, n_classes, H, W] where n_classes == T
+    print("logits shape:", logits.shape)  # expect [1, n_classes, H, W] where n_classes = T
     for tile_idx, stack in tiles.items():
         noisy = stack['noisy']  # [T,H,W]
         clean = stack['clean']  # [T,H,W]
@@ -211,7 +208,7 @@ with torch.no_grad():
     stats = evaluate_model_masks(pred_masks, processed)
     print("Evaluation stats:", stats)
 
-    # Optional: reconstruct full 2048x2048 mask
+    #  reconstruct full 2048x2048 mask
     full_mask = reconstruct_full_image(pred_masks)
     print("Full reconstructed mask shape:", full_mask.shape)
 
