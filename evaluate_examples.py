@@ -8,7 +8,7 @@ import argparse
 from pathlib import Path
 
 from dataset import CosmicRaysSequenceDataset
-from Unet import UNetSimple  # o el nombre de tu modelo real
+from Unet import UNetSimple 
 
 def evaluate_model(model_path, noisy_dir, clean_dir, num_samples=5, threshold=0.5, device="cuda"):
     # Dataset de validación
