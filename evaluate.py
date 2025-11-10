@@ -1,4 +1,4 @@
-# run_inference.py
+
 import os
 import torch
 from pathlib import Path
