@@ -73,17 +73,17 @@ if __name__ == "__main__":
 
 
     recon_input_paths = [
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\photsat_frames_cosmic_rays\photsat_frames_cosmic_rays\Img_steady_capture_35202_2200_scanning__optic_0_0.fits",
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\photsat_frames_cosmic_rays\photsat_frames_cosmic_rays\Img_steady_capture_35203_2200_scanning__optic_0_0.fits",
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\photsat_frames_cosmic_rays\photsat_frames_cosmic_rays\Img_steady_capture_35204_2200_scanning__optic_0_0.fits",
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\photsat_frames_cosmic_rays\photsat_frames_cosmic_rays\Img_steady_capture_35205_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35202_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35203_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35204_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35205_2200_scanning__optic_0_0.fits",
     ]
 
     ground_truth_paths = [
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\no_cosmicrays_frames\no_noisy_frames\Img_steady_capture_35202_2200_scanning__optic_0_0.fits",
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\no_cosmicrays_frames\no_noisy_frames\Img_steady_capture_35203_2200_scanning__optic_0_0.fits",
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\no_cosmicrays_frames\no_noisy_frames\Img_steady_capture_35204_2200_scanning__optic_0_0.fits",
-        r"C:\Users\javie\Documents\Carrera putiversitaria\CUBESATUB\no_cosmicrays_frames\no_noisy_frames\Img_steady_capture_35205_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35202_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35203_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35204_2200_scanning__optic_0_0.fits",
+        r"...\Img_steady_capture_35205_2200_scanning__optic_0_0.fits",
     ]
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
